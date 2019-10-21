@@ -66,7 +66,7 @@ body {
 }
 
 /* "image" */
-.fakeimg {
+.image {
   float: right;
   border-radius: 5px;
   /* background-color: #ddd; */
@@ -115,7 +115,7 @@ body {
   margin-top: 20px;
 }
 
-/* when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* if screen is less than 800px wide, make the two columns stack on top of each other */
 @media screen and (max-width: 800px) {
   .leftcolumn,
   .rightcolumn {
@@ -124,7 +124,7 @@ body {
   }
 }
 
-/* when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* when the screen is less than 400px wide, make the navigation links stack on top of each other */
 /* @media screen and (max-width: 400px) {
   .topnav a {
     float: none;
