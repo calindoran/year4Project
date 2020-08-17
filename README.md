@@ -26,3 +26,5 @@ Visual Studio is used to develop apps for Android, iOS, Windows, web, and cloud.
 
 Visual Studio Code
 When using multiple languages like Python and C++, or for cross-platform development, it can be a great editor tool. It provides the ability to debug and use version control through a multitude of extensions and addons on many platforms.
+
+•	This will be used for some cross-platform testing to ensure support for the application. 
