@@ -11,7 +11,7 @@
 #include "lidar_data.h"
 #include "lidar_params.h"
 
-//this class wraps LidarDriver or fake to our task
+//this class wraps LidarDriver to our task
 
 class LidarDeviceWrapper
 {

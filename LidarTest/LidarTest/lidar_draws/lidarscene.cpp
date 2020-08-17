@@ -5,7 +5,6 @@
 
 #include "lidarscene.h"
 #include "lidarcontainer.h"
-
 #include "..\helpers\pooled_shared.h"
 
 LidarScene::LidarScene(const LidarParams &params)

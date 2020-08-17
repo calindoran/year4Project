@@ -4,6 +4,7 @@
 // File: lidar_params.h
 
 #pragma once
+
 #include <stdint.h>
 #include <string>
 

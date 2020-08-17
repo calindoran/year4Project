@@ -1,7 +1,7 @@
 #pragma once
+
 #ifndef _MTHREAD_CONFIG_H_
 #define _MTHREAD_CONFIG_H_
-
 
 #include <mutex>
 #include "..\helpers\spinlock.h"

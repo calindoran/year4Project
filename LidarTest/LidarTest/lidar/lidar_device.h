@@ -4,11 +4,10 @@
 // File: lidar_device.h
 
 #pragma once
+
 #include <memory>
 #include <memory.h>
 #include <algorithm>
-
-#ifndef LIDAR_SDK_ABSENT
 #include "rplidar.h" //RPLIDAR standard sdk, all-in-one header
 
 using namespace rp::standalone::rplidar;
@@ -22,5 +21,3 @@ inline auto allocLidarDriver()
                 RPlidarDriver::DisposeDriver(p);
         });
 }
-
-#endif

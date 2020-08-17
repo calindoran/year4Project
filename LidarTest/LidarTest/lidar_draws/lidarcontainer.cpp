@@ -5,7 +5,6 @@
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
-
 #include "lidarcontainer.h"
 #include "..\lidar\lidardevicewrapper.h"
 #include "..\helpers\block_delay.h"

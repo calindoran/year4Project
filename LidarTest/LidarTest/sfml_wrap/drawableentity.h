@@ -1,10 +1,10 @@
 #ifndef DRAWABLEENTITY_H
 #define DRAWABLEENTITY_H
+
 #include <memory>
 #include <vector>
 #include <cstdint>
 #include "inputsource.h"
-
 #include "SFML/Graphics/Drawable.hpp"
 
 class Scene;

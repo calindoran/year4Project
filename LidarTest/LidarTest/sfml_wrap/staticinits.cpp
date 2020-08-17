@@ -1,3 +1,7 @@
+/*
+*    Used mainly for cross-platform, i.e from windows to linux for testing with CMake
+*/
+
 #include "staticinits.h"
 
 #ifdef _WIN32

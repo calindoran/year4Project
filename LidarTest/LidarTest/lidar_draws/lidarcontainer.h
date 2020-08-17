@@ -4,11 +4,10 @@
 // File: lidarcontainer.h
 
 #pragma once
+
 #include <mutex>
 #include <atomic>
-
 #include "..\helpers\spinlock.h"
-
 #include "..\sfml_wrap\drawableentity.h"
 #include "..\helpers\runners.h"
 #include "..\lidar\lidar_params.h"

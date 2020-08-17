@@ -1,4 +1,5 @@
 #pragma once
+
 #include "SFML/System.hpp"
 #include "SFML/Graphics/RenderWindow.hpp"
 #include <mutex>

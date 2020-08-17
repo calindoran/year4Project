@@ -4,6 +4,7 @@
 // File: lidarscene.h
 
 #pragma once
+
 #include "..\sfml_wrap\scene.h"
 #include "..\lidar\lidar_params.h"
 

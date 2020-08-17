@@ -1,5 +1,4 @@
 #include "SFML/Window/Event.hpp"
-
 #include <thread>
 #include <chrono>
 #include "winrend.h"

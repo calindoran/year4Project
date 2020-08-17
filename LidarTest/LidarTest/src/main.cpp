@@ -22,11 +22,7 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
     std::cout << "A.R.M LIDAR System" << std::endl;
-#ifndef LIDAR_SDK_ABSENT //if using real data: LIDAR_SDK_ABSENT. for no sdk and fake window: LIDAR_SDK_PRESENT(may not work)
     std::cout << "Version: " << RPLIDAR_SDK_VERSION << std::endl;
-#else
-    std::cout << "Version: no sdk set at compile. Using fake classes." << std::endl;
-#endif
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
 

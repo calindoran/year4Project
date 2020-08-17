@@ -4,6 +4,7 @@
 // File: lidar_data.h
 
 #pragma once
+
 #include <stdint.h>
 #include <sstream>
 
