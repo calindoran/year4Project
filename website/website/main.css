@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans';
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(190, 190, 190),
+    rgb(255, 255, 255)
+  );
+}
+
+/* header title */
+.header {
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+/* topnav bar */
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* topnav links */
+.topnav a {
+  float: left;
+  color: black;
+  background-color: #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px 16px;
+  margin: 2px;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* color on hover */
+.topnav a:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+/* left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  /* background-color: #f1f1f1; */
+  padding-left: 20px;
+}
+
+/* "image" */
+.image {
+  float: right;
+  border-radius: 5px;
+  /* background-color: #ddd; */
+  width: 190px;
+  padding: 5px;
+}
+
+/* card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.09), 0 0px 5px 0 rgba(0, 0, 0, 0.09);
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.card a {
+  display: inline-block;
+  color: black;
+  background-color: #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.card a:hover {
+  background-color: whitesmoke;
+}
+
+/* clear floats after columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: transparent;
+  margin-top: 20px;
+}
+
+/* if screen is less than 800px wide, make the two columns stack on top of each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* when the screen is less than 400px wide, make the navigation links stack on top of each other */
+/* @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+} */

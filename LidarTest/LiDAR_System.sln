@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "main_project", "LidarTest\LidarTest.vcxproj", "{B47F4F90-999A-418B-8A13-DDE1DE5F5980}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rplidar_driver", "..\rplidar_sdk-master\sdk\workspaces\vc14\rplidar_driver\rplidar_driver.vcxproj", "{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Debug|x64.ActiveCfg = Debug|x64
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Debug|x64.Build.0 = Debug|x64
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Debug|x86.ActiveCfg = Debug|Win32
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Debug|x86.Build.0 = Debug|Win32
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Release|x64.ActiveCfg = Release|x64
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Release|x64.Build.0 = Release|x64
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Release|x86.ActiveCfg = Release|Win32
+		{B47F4F90-999A-418B-8A13-DDE1DE5F5980}.Release|x86.Build.0 = Release|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Debug|x64.ActiveCfg = Debug|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Debug|x86.Build.0 = Debug|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Release|x64.ActiveCfg = Release|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Release|x86.ActiveCfg = Release|Win32
+		{1F0AA469-8A8F-4ADA-931D-967D2C5996DF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF62BED2-DF0C-460C-9372-BF5A3974593D}
+	EndGlobalSection
+EndGlobal
