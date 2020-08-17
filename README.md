@@ -7,7 +7,7 @@ Hardware used:
 Slamtec RPLiDAR A2M8
 
 
-Technologies used:
+Software used:
 
 C++
 C++ is a cross-platformed language that can be used to create sophisticated high-performance applications. The language gives programmers a high level of control over system resources and memory.
