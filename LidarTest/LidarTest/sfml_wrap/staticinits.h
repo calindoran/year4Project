@@ -4,7 +4,7 @@
 class StaticInits
 {
 public:
-    StaticInits();
+	StaticInits();
 };
 
 #endif // STATICINITS_H

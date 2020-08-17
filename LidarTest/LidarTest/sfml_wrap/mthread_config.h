@@ -7,7 +7,7 @@
 #include "..\helpers\spinlock.h"
 
 //typedef SpinLock LockType;
-using LockType  = std::recursive_mutex;
+using LockType = std::recursive_mutex;
 using LockGuard = std::lock_guard<LockType>;
 
 using RendererLockType = recursive_spinlock;

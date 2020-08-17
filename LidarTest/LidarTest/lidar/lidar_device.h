@@ -15,9 +15,9 @@ using RPlidarDriverPtr = std::shared_ptr<rp::standalone::rplidar::RPlidarDriver>
 
 inline auto allocLidarDriver()
 {
-    return RPlidarDriverPtr(RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT), [](RPlidarDriver* p)
-        {
-            if (p)
-                RPlidarDriver::DisposeDriver(p);
-        });
+	return RPlidarDriverPtr(RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT), [](RPlidarDriver* p)
+		{
+			if (p)
+				RPlidarDriver::DisposeDriver(p);
+		});
 }

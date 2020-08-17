@@ -11,16 +11,16 @@ class Scene;
 class DrawableEntity : public sf::Drawable
 {
 protected:
-    DrawableEntity() = default;
+	DrawableEntity() = default;
 public:
-    ~DrawableEntity() override = default;
-    virtual void update(Scene& scene, float time, const InputSource& input) = 0;
-    virtual void setScreenSize(float width, float height);
-    virtual void setScale(float mx, float my);
+	~DrawableEntity() override = default;
+	virtual void update(Scene& scene, float time, const InputSource& input) = 0;
+	virtual void setScreenSize(float width, float height);
+	virtual void setScale(float mx, float my);
 };
 
-using DrawablePtr        = std::shared_ptr<sf::Drawable>;
-using DrawableEntityPtr  = std::shared_ptr<DrawableEntity>;
+using DrawablePtr = std::shared_ptr<sf::Drawable>;
+using DrawableEntityPtr = std::shared_ptr<DrawableEntity>;
 using DrawableEntityList = std::vector<DrawableEntityPtr>;
 
 #endif // DRAWABLEENTITY_H

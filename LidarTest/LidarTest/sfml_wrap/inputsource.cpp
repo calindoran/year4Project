@@ -3,71 +3,69 @@
 
 class KeyboardNavigator : public INavTest2D
 {
-    const InputSource *is{nullptr};
+	const InputSource* is{ nullptr };
 public:
-    KeyboardNavigator(const InputSource *is): is(is) {}
-    bool isLeft()  const override
-    {
-        return is->isKeyPressed(sf::Keyboard::Key::A);
-    }
-    bool isRight() const override
-    {
-        return is->isKeyPressed(sf::Keyboard::Key::D);
-    }
-    bool isTop() const override
-    {
-        return is->isKeyPressed(sf::Keyboard::Key::W);
-    }
-    bool isBottom() const override
-    {
-        return is->isKeyPressed(sf::Keyboard::Key::S);
-    }
-    bool isModify1() const override
-    {
-        return is->isKeyPressed(sf::Keyboard::Key::LShift);
-    }
+	KeyboardNavigator(const InputSource* is) : is(is) {}
+	bool isLeft()  const override
+	{
+		return is->isKeyPressed(sf::Keyboard::Key::A);
+	}
+	bool isRight() const override
+	{
+		return is->isKeyPressed(sf::Keyboard::Key::D);
+	}
+	bool isTop() const override
+	{
+		return is->isKeyPressed(sf::Keyboard::Key::W);
+	}
+	bool isBottom() const override
+	{
+		return is->isKeyPressed(sf::Keyboard::Key::S);
+	}
+	bool isModify1() const override
+	{
+		return is->isKeyPressed(sf::Keyboard::Key::LShift);
+	}
 };
-
 
 InputSource::InputSource()
 {
-    //fixme: will be keyboard only now
-    currentConfiguredNavigator = pools::allocShared<KeyboardNavigator>(this);
+	//fixme: will be keyboard only now
+	currentConfiguredNavigator = pools::allocShared<KeyboardNavigator>(this);
 }
 
-void InputSource::consumeEvents(EventsQueue &events)
+void InputSource::consumeEvents(EventsQueue& events)
 {
-    EventsQueue::queue_t tmp;
-    events.swap(tmp);
-    processEvents(tmp);
-
+	EventsQueue::queue_t tmp;
+	events.swap(tmp);
+	processEvents(tmp);
 }
 
 bool InputSource::isKeyPressed(sf::Keyboard::Key key) const
 {
-    if (kbPressedMap.count(key))
-        return kbPressedMap.at(key);
-    return false;
+	if (kbPressedMap.count(key))
+		return kbPressedMap.at(key);
+	return false;
 }
 
 INavTest2DPtr InputSource::getNavigator() const
 {
-    return currentConfiguredNavigator;
+	return currentConfiguredNavigator;
 }
 
-void InputSource::processEvents(const EventsQueue::queue_t &src)
+void InputSource::processEvents(const EventsQueue::queue_t& src)
 {
-    updateKbPressed(src);
+	updateKbPressed(src);
 }
 
-void InputSource::updateKbPressed(const EventsQueue::queue_t &src)
+void InputSource::updateKbPressed(const EventsQueue::queue_t& src)
 {
-    for (const auto& e : src)
-    {
-        if (e.type == sf::Event::KeyPressed)
-            kbPressedMap[e.key.code] = true;
+	for (const auto& e : src)
+	{
+		if (e.type == sf::Event::KeyPressed)
+			kbPressedMap[e.key.code] = true;
 
-        if (e.type == sf::Event::KeyReleased)
-            kbPressedMap[e.key.code] = false;
-    }
+		if (e.type == sf::Event::KeyReleased)
+			kbPressedMap[e.key.code] = false;
+	}
 }

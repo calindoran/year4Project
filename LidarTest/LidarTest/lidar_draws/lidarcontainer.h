@@ -20,22 +20,22 @@
 class LidarContainer : public DrawableEntity
 {
 private:
-    utility::runner_t lidarThread{nullptr};
+	utility::runner_t lidarThread{ nullptr };
 
-    mutable spinlock valuesLock;
-    LidarValuesVector lastToDraw;
-    sf::Vector2f size{0.f, 0.f};
-    sf::Vector2f scale{1.f, 1.f};
+	mutable spinlock valuesLock;
+	LidarValuesVector lastToDraw;
+	sf::Vector2f size{ 0.f, 0.f };
+	sf::Vector2f scale{ 1.f, 1.f };
 
-    //this is not requested example of communication with program
-    std::atomic<uint32_t> scanDensity;
+	//this is not requested example of communication with program
+	std::atomic<uint32_t> scanDensity;
 public:
-    LidarContainer(const LidarParams &params);
-    ~LidarContainer() override;
+	LidarContainer(const LidarParams& params);
+	~LidarContainer() override;
 
-    void update(Scene& scene, float time, const InputSource& input) override;
-    void draw(sf::RenderTarget &where, sf::RenderStates states) const override;
+	void update(Scene& scene, float time, const InputSource& input) override;
+	void draw(sf::RenderTarget& where, sf::RenderStates states) const override;
 
-    virtual void setScreenSize(float width, float height);
-    virtual void setScale(float mx, float my);
+	virtual void setScreenSize(float width, float height);
+	virtual void setScale(float mx, float my);
 };

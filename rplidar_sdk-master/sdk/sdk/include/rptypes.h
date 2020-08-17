@@ -7,37 +7,36 @@
  *  http://www.slamtec.com
  *
  */
-/*
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice,
- *    this list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- *    this list of conditions and the following disclaimer in the documentation
- *    and/or other materials provided with the distribution.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- */
+ /*
+  * Redistribution and use in source and binary forms, with or without
+  * modification, are permitted provided that the following conditions are met:
+  *
+  * 1. Redistributions of source code must retain the above copyright notice,
+  *    this list of conditions and the following disclaimer.
+  *
+  * 2. Redistributions in binary form must reproduce the above copyright notice,
+  *    this list of conditions and the following disclaimer in the documentation
+  *    and/or other materials provided with the distribution.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+  * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  *
+  */
 
 #pragma once
 
-
 #ifdef _WIN32
 
-//fake stdint.h for VC only
+  //fake stdint.h for VC only
 
 typedef signed   char     int8_t;
 typedef unsigned char     uint8_t;
@@ -57,8 +56,7 @@ typedef unsigned __int64  uint64_t;
 
 #endif
 
-
-//based on stdint.h
+  //based on stdint.h
 typedef int8_t         _s8;
 typedef uint8_t        _u8;
 
@@ -77,11 +75,10 @@ typedef uint64_t       _u64;
 #define __attribute__(x)
 #endif
 
-
 // The _word_size_t uses actual data bus width of the current CPU
 #ifdef _AVR_
 typedef _u8            _word_size_t;
-#define THREAD_PROC    
+#define THREAD_PROC
 #elif defined (WIN64)
 typedef _u64           _word_size_t;
 #define THREAD_PROC    __stdcall
@@ -90,12 +87,11 @@ typedef _u32           _word_size_t;
 #define THREAD_PROC    __stdcall
 #elif defined (__GNUC__)
 typedef unsigned long  _word_size_t;
-#define THREAD_PROC   
+#define THREAD_PROC
 #elif defined (__ICCARM__)
 typedef _u32            _word_size_t;
-#define THREAD_PROC  
+#define THREAD_PROC
 #endif
-
 
 typedef uint32_t u_result;
 
@@ -113,4 +109,4 @@ typedef uint32_t u_result;
 #define IS_OK(x)    ( ((x) & RESULT_FAIL_BIT) == 0 )
 #define IS_FAIL(x)  ( ((x) & RESULT_FAIL_BIT) )
 
-typedef _word_size_t (THREAD_PROC * thread_proc_t ) ( void * );
+typedef _word_size_t(THREAD_PROC* thread_proc_t) (void*);

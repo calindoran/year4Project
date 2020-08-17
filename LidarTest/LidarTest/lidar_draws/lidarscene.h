@@ -11,8 +11,8 @@
 class LidarScene : public Scene
 {
 public:
-    LidarScene(const LidarParams& params);
-    ~LidarScene() override = default;
+	LidarScene(const LidarParams& params);
+	~LidarScene() override = default;
 
-    void viewWasChanged(const sf::View& view) const override;
+	void viewWasChanged(const sf::View& view) const override;
 };

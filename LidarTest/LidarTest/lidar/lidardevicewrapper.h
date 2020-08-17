@@ -16,27 +16,27 @@
 class LidarDeviceWrapper
 {
 private:
-    RPlidarDriverPtr drv{ nullptr };
-    rplidar_response_device_info_t devinfo;
+	RPlidarDriverPtr drv{ nullptr };
+	rplidar_response_device_info_t devinfo;
 
-    LidarParams orig_params;
-    bool init(std::string dev_path, const uint32_t baud_rate);
+	LidarParams orig_params;
+	bool init(std::string dev_path, const uint32_t baud_rate);
 
 public:
-    NO_COPYMOVE(LidarDeviceWrapper);
-    LidarDeviceWrapper() = delete;
-    LidarDeviceWrapper(const LidarParams& params);
-    ~LidarDeviceWrapper();
+	NO_COPYMOVE(LidarDeviceWrapper);
+	LidarDeviceWrapper() = delete;
+	LidarDeviceWrapper(const LidarParams& params);
+	~LidarDeviceWrapper();
 
-    bool checkRPLIDARHealth() const;
-    bool testHealthAndReinitIfNeed();
-    void cleanup();
+	bool checkRPLIDARHealth() const;
+	bool testHealthAndReinitIfNeed();
+	void cleanup();
 
-    void runScan(uint32_t options = 0) const;
-    void stopScan() const;
+	void runScan(uint32_t options = 0) const;
+	void stopScan() const;
 
-    //grabs scan data of count samples, i.e. 1 full circle divided into count pieces
-    LidarValuesVector readOnce(size_t count = 8192) const;
+	//grabs scan data of count samples, i.e. 1 full circle divided into count pieces
+	LidarValuesVector readOnce(size_t count = 8192) const;
 
-    std::string toString() const;
+	std::string toString() const;
 };
