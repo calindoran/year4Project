@@ -1,4 +1,4 @@
-# year4Project
+# Slamtec Lidar Project: A.R.M Lidar System
 
 This is the reposatory for my final year project in software development.
 
