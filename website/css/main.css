@@ -3,14 +3,16 @@
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   max-width: 1080px;
   margin: auto;
   padding: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(to bottom right,
-      rgb(190, 190, 190),
-      rgb(255, 255, 255));
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(190, 190, 190),
+    rgb(255, 255, 255)
+  );
 }
 
 /* header title */
@@ -74,6 +76,19 @@ body {
   padding: 5px;
 }
 
+.profileimage {
+  float: right;
+  border-radius: 200px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0),
+    rgb(255, 251, 0)
+  );
+  width: 195px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
 /* card effect for articles */
 .card {
   background-color: white;
@@ -117,7 +132,6 @@ body {
 
 /* if screen is less than 800px wide, make the two columns stack on top of each other */
 @media screen and (max-width: 800px) {
-
   .leftcolumn,
   .rightcolumn {
     width: 100%;
@@ -126,9 +140,10 @@ body {
 }
 
 /* when the screen is less than 400px wide, make the navigation links stack on top of each other */
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
   .topnav a {
-    float: none;
+    float: right;
     width: 100%;
+    padding: 10;
   }
-} */
+}
