@@ -1,4 +1,4 @@
-# Slamtec Lidar Project: A.R.M Lidar System
+# Slamtec Lidar Project: A.R.M Lidar System #
 
 This is the repository for my final year project in software development.
 
